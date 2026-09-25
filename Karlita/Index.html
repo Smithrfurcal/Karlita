@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Para Karlita ❤️</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffb6d9,
+                    #ffcce6,
+                    #ffe6f2
+                );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow-x: hidden;
+
+            padding: 40px 20px;
+        }
+
+
+        /* =========================
+           FOTOS ALREDEDOR
+        ========================== */
+
+        .fotos-alrededor {
+
+            position: fixed;
+            inset: 0;
+
+            pointer-events: none;
+            z-index: 1;
+        }
+
+
+        .foto {
+
+            position: absolute;
+
+            width: 150px;
+            height: 185px;
+
+            object-fit: cover;
+
+            background: white;
+
+            padding: 8px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* FOTO 1
+           EBVF2809.JPG
+           MÁS ARRIBA */
+
+        .foto1 {
+
+            left: 4%;
+            top: 1%;
+
+            transform: rotate(-8deg);
+        }
+
+
+        .foto2 {
+
+            right: 5%;
+            top: 7%;
+
+            transform: rotate(7deg);
+        }
+
+
+        /* IMG_6903.PNG */
+
+        .foto3 {
+
+            left: 2%;
+            top: 34%;
+
+            transform: rotate(5deg);
+        }
+
+
+        .foto4 {
+
+            right: 1%;
+            top: 40%;
+
+            transform: rotate(-7deg);
+        }
+
+
+        .foto5 {
+
+            left: 7%;
+            bottom: 7%;
+
+            transform: rotate(9deg);
+        }
+
+
+        .foto6 {
+
+            right: 7%;
+            bottom: 7%;
+
+            transform: rotate(-9deg);
+        }
+
+
+        .foto7 {
+
+            left: 20%;
+            top: 2%;
+
+            transform: rotate(6deg);
+        }
+
+
+        .foto8 {
+
+            right: 20%;
+            top: 2%;
+
+            transform: rotate(-5deg);
+        }
+
+
+        .foto9 {
+
+            left: 19%;
+            bottom: 1%;
+
+            transform: rotate(-6deg);
+        }
+
+
+        .foto10 {
+
+            right: 19%;
+            bottom: 1%;
+
+            transform: rotate(5deg);
+        }
+
+
+
+        /* =========================
+           TARJETA CENTRAL
+        ========================== */
+
+        .card {
+
+            position: relative;
+
+            z-index: 5;
+
+            width: 550px;
+            max-width: 100%;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            border:
+                4px solid #ff69b4;
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.25);
+
+            animation:
+                aparecer 1s ease;
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.8);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+            }
+        }
+
+
+
+        /* =========================
+           CORAZÓN
+        ========================== */
+
+        .heart {
+
+            font-size: 70px;
+
+            animation:
+                latido 1.2s infinite;
+        }
+
+
+        @keyframes latido {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+            }
+
+            50% {
+
+                transform:
+                    scale(1.2);
+            }
+        }
+
+
+
+        /* =========================
+           TÍTULO
+        ========================== */
+
+        h1 {
+
+            color: #ff4f9a;
+
+            font-size: 42px;
+
+            margin: 10px 0;
+        }
+
+
+        .subtitulo {
+
+            color: #777;
+
+            font-size: 18px;
+
+            margin-bottom: 25px;
+        }
+
+
+
+        /* =========================
+           BOTONES
+        ========================== */
+
+        button {
+
+            border: none;
+
+            border-radius: 30px;
+
+            padding:
+                14px 25px;
+
+            margin:
+                8px;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition:
+                0.3s;
+        }
+
+
+        .boton-mensaje {
+
+            background:
+                #ff69b4;
+
+            color: white;
+        }
+
+
+        .boton-sorpresa {
+
+            background:
+                #ffb6d9;
+
+            color:
+                #7a2452;
+        }
+
+
+        button:hover {
+
+            transform:
+                scale(1.08);
+
+            box-shadow:
+                0 5px 15px
+                rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        /* =========================
+           NOTA DE MÚSICA
+        ========================== */
+
+        .nota-musica {
+
+            font-size: 14px;
+
+            color: #888;
+
+            margin-top: 20px;
+
+            font-style: italic;
+        }
+
+
+
+        /* =========================
+           MENSAJE
+        ========================== */
+
+        #mensaje {
+
+            display: none;
+
+            margin-top: 25px;
+
+            text-align: left;
+
+            color: #444;
+
+            line-height: 1.7;
+
+            animation:
+                aparecerMensaje 0.8s ease;
+        }
+
+
+        @keyframes aparecerMensaje {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        #mensaje p {
+
+            margin-bottom: 18px;
+        }
+
+
+        .firma {
+
+            text-align: center;
+
+            font-weight: bold;
+
+            color: #ff4f9a;
+
+            margin-top: 25px;
+
+            font-size: 18px;
+        }
+
+
+
+        /* =========================
+           SORPRESA
+        ========================== */
+
+        #sorpresa {
+
+            display: none;
+
+            margin-top: 25px;
+
+            font-size: 25px;
+
+            color: #ff4f9a;
+
+            animation:
+                aparecerMensaje 0.8s ease;
+        }
+
+
+
+        /* =========================
+           FLORES Y CORAZONES
+        ========================== */
+
+        .flor {
+
+            position: fixed;
+
+            top: -60px;
+
+            font-size: 28px;
+
+            z-index: 10;
+
+            pointer-events: none;
+
+            animation:
+                caer linear forwards;
+        }
+
+
+        @keyframes caer {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg)
+                    translateX(0);
+
+                opacity: 1;
+            }
+
+            25% {
+
+                transform:
+                    translateY(25vh)
+                    rotate(90deg)
+                    translateX(25px);
+            }
+
+            50% {
+
+                transform:
+                    translateY(50vh)
+                    rotate(180deg)
+                    translateX(-25px);
+            }
+
+            75% {
+
+                transform:
+                    translateY(75vh)
+                    rotate(270deg)
+                    translateX(20px);
+            }
+
+            100% {
+
+                transform:
+                    translateY(115vh)
+                    rotate(360deg)
+                    translateX(-20px);
+
+                opacity: 0;
+            }
+        }
+
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .foto {
+
+                width: 105px;
+                height: 130px;
+            }
+
+            .foto7,
+            .foto8,
+            .foto9,
+            .foto10 {
+
+                display: none;
+            }
+        }
+
+
+
+        /* =========================
+           TELÉFONO
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding:
+                    20px 10px;
+            }
+
+
+            .card {
+
+                padding:
+                    25px 18px;
+            }
+
+
+            h1 {
+
+                font-size: 32px;
+            }
+
+
+            .heart {
+
+                font-size: 55px;
+            }
+
+
+            .foto {
+
+                width: 72px;
+                height: 90px;
+
+                padding: 5px;
+            }
+
+
+            /* FOTO 1
+               TAMBIÉN MÁS ARRIBA */
+
+            .foto1 {
+
+                left: 1%;
+                top: 1%;
+            }
+
+
+            .foto2 {
+
+                right: 1%;
+                top: 5%;
+            }
+
+
+            .foto3 {
+
+                left: 0;
+                top: 34%;
+            }
+
+
+            .foto4 {
+
+                right: 0;
+                top: 38%;
+            }
+
+
+            .foto5 {
+
+                left: 3%;
+                bottom: 4%;
+            }
+
+
+            .foto6 {
+
+                right: 3%;
+                bottom: 4%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =========================
+         FOTOS
+    ========================== -->
+
+    <div class="fotos-alrededor">
+
+
+        <img
+            class="foto foto1"
+            src="Fotos/EBVF2809.JPG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto2"
+            src="Fotos/YCZZ2114.JPG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto3"
+            src="Fotos/IMG_6903.PNG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto4"
+            src="Fotos/IMG_6904.PNG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto5"
+            src="Fotos/IMG_6913.PNG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto6"
+            src="Fotos/IMG_E4926.JPG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto7"
+            src="Fotos/IMG_E5511[1].jpg"
+            alt="Foto">
+
+
+        <img
+            class="foto foto8"
+            src="Fotos/IMG_E6375.JPG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto9"
+            src="Fotos/IMG_E7015.JPG"
+            alt="Foto">
+
+
+        <img
+            class="foto foto10"
+            src="Fotos/PICU8825.JPG"
+            alt="Foto">
+
+
+    </div>
+
+
+
+    <!-- =========================
+         TARJETA PRINCIPAL
+    ========================== -->
+
+    <div class="card">
+
+
+        <div class="heart">
+            ❤️
+        </div>
+
+
+        <h1>
+            Hola Karlita ❤️
+        </h1>
+
+
+        <p class="subtitulo">
+            Hice algo especial para ti.
+        </p>
+
+
+
+        <!-- BOTÓN MENSAJE -->
+
+        <button
+            class="boton-mensaje"
+            onclick="mostrarMensaje()">
+
+            💌 Abrir mi mensaje
+
+        </button>
+
+
+
+        <!-- BOTÓN SORPRESA -->
+
+        <button
+            class="boton-sorpresa"
+            onclick="mostrarSorpresa()">
+
+            🎁 Una sorpresa
+
+        </button>
+
+
+
+        <!-- NOTA -->
+
+        <p class="nota-musica">
+
+            Quería poner música mientras lees pero no pudeee
+
+            sorry :,VVV 😒😒👌😭😭
+
+        </p>
+
+
+
+        <!-- =========================
+             MENSAJE
+        ========================== -->
+
+        <div id="mensaje">
+
+
+            <p>
+
+                <strong>
+
+                    ¿Sabes que te amo, verdad,
+                    Karlitaaaa? XDDD ❤️
+
+                </strong>
+
+            </p>
+
+
+
+            <p>
+
+                Quiero decirte que no me arrepiento
+                para nada de haberte conocido aquel gran
+
+                <strong>
+                    18 de marzo
+                </strong>.
+
+                Ya llevamos apenas
+
+                <strong>
+                    6 meses
+                </strong>...
+
+                ¿6 meses?
+
+                <strong>
+
+                    LOS MEJORES 6 MESES
+                    DE MI FUCKIN VIDA.
+
+                </strong>
+
+                😭❤️
+
+            </p>
+
+
+
+            <p>
+
+                Ehhh, la verdad me siento muy agradecido
+                de que hayas llegado a mi vida.
+
+                Gracias por estar conmigo,
+                por todos los momentos que hemos compartido
+                y por hacer que estos meses sean
+                tan especiales para mí.
+
+            </p>
+
+
+
+            <p>
+
+                <strong>
+                    Te amo muchisisisisísimo
+                </strong>
+
+                y espero que sigamos teniendo
+                más meses juntos.
+
+            </p>
+
+
+
+            <p>
+
+                ¿MESES?
+
+                <strong>
+                    AÑOSSSSSS.
+                </strong>
+
+                XDDD ❤️
+
+            </p>
+
+
+
+            <p>
+
+                Espero que algún día podamos mirar atrás
+                y decir:
+
+                <em>
+
+                    "Mira todo lo que hemos vivido juntos."
+
+                </em>
+
+                🥹❤️
+
+            </p>
+
+
+
+            <p>
+
+                Quiero seguir compartiendo momentos contigo,
+
+                riéndonos de cualquier tontería,
+
+                haciendo nuestras locuras y,
+                obviamente...
+
+            </p>
+
+
+
+            <p>
+
+                <strong>
+
+                    JUGANDO MUCHÍSIMO AL ROBLOX.
+
+                </strong>
+
+                🎮😂
+
+            </p>
+
+
+
+            <p>
+
+                <strong>
+
+                    OHH ZIIIIII ❤️❤️❤️
+
+                </strong>
+
+            </p>
+
+
+
+            <p>
+
+                Gracias por llegar a mi vida,
+                Karlita.
+
+                <strong>
+
+                    Te amo muchísimo. ❤️
+
+                </strong>
+
+            </p>
+
+
+
+            <p class="firma">
+
+                — Alfredo Smith 6 para mi Karlita 7,
+
+                juntos formando el 67 🤷‍♂️🤞
+
+                ╰(*°▽°*)╯
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             SORPRESA
+        ========================== -->
+
+        <div id="sorpresa">
+
+            🌸🌸🌸
+
+            <br>
+
+            Te amo Karlita ❤️
+
+            <br>
+
+            🌸🌸🌸
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* =========================
+           MOSTRAR MENSAJE
+        ========================== */
+
+        function mostrarMensaje() {
+
+            const mensaje =
+                document.getElementById(
+                    "mensaje"
+                );
+
+
+            if (
+                mensaje.style.display ===
+                "block"
+            ) {
+
+                mensaje.style.display =
+                    "none";
+
+            }
+
+            else {
+
+                mensaje.style.display =
+                    "block";
+            }
+
+        }
+
+
+
+        /* =========================
+           MOSTRAR SORPRESA
+        ========================== */
+
+        function mostrarSorpresa() {
+
+            const sorpresa =
+                document.getElementById(
+                    "sorpresa"
+                );
+
+
+            if (
+                sorpresa.style.display ===
+                "block"
+            ) {
+
+                sorpresa.style.display =
+                    "none";
+
+                return;
+            }
+
+
+            sorpresa.style.display =
+                "block";
+
+
+            crearFlores();
+
+        }
+
+
+
+        /* =========================
+           CREAR MUCHAS FLORES
+        ========================== */
+
+        function crearFlores() {
+
+            const flores = [
+
+                "🌸",
+                "🌷",
+                "🌹",
+                "🌺",
+                "🌻",
+                "💐",
+                "🌼",
+                "❤️",
+                "💗",
+                "💖",
+                "💕"
+
+            ];
+
+
+            /* MUCHAS MÁS */
+
+            for (
+                let i = 0;
+                i < 80;
+                i++
+            ) {
+
+
+                const flor =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                flor.classList.add(
+                    "flor"
+                );
+
+
+                flor.innerHTML =
+                    flores[
+                        Math.floor(
+                            Math.random() *
+                            flores.length
+                        )
+                    ];
+
+
+                flor.style.left =
+                    Math.random() *
+                    100 +
+                    "vw";
+
+
+                flor.style.animationDuration =
+                    (
+                        4 +
+                        Math.random() *
+                        5
+                    ) +
+                    "s";
+
+
+                flor.style.fontSize =
+                    (
+                        18 +
+                        Math.random() *
+                        25
+                    ) +
+                    "px";
+
+
+                flor.style.animationDelay =
+                    (
+                        Math.random() *
+                        2
+                    ) +
+                    "s";
+
+
+                document.body.appendChild(
+                    flor
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        flor.remove();
+
+                    },
+                    12000
+                );
+
+            }
+
+
+            /* SEGUNDA LLUVIA
+               PARA QUE DURE MÁS */
+
+            setTimeout(
+                () => {
+
+                    for (
+                        let i = 0;
+                        i < 50;
+                        i++
+                    ) {
+
+                        const flor =
+                            document.createElement(
+                                "div"
+                            );
+
+
+                        flor.classList.add(
+                            "flor"
+                        );
+
+
+                        flor.innerHTML =
+                            flores[
+                                Math.floor(
+                                    Math.random() *
+                                    flores.length
+                                )
+                            ];
+
+
+                        flor.style.left =
+                            Math.random() *
+                            100 +
+                            "vw";
+
+
+                        flor.style.animationDuration =
+                            (
+                                4 +
+                                Math.random() *
+                                5
+                            ) +
+                            "s";
+
+
+                        flor.style.fontSize =
+                            (
+                                18 +
+                                Math.random() *
+                                25
+                            ) +
+                            "px";
+
+
+                        document.body.appendChild(
+                            flor
+                        );
+
+
+                        setTimeout(
+                            () => {
+
+                                flor.remove();
+
+                            },
+                            12000
+                        );
+
+                    }
+
+                },
+                3000
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
